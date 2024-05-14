@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #image-container {
+    height: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr); /* 12 columnas */
+    grid-template-rows: repeat(8, 1fr); /* 12 filas */
+    grid-gap: 0; /* Elimina el espacio entre las filas y las columnas */
+    margin:0;
+    padding:0;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 100%;
+    display: flex; /* Usa flexbox para que las imágenes llenen todo el espacio */
+    overflow: hidden;
+  }
+  
+  .image {
+    flex: 1; /* Las imágenes se expandirán para llenar todo el espacio */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Ajusta el tamaño de las imágenes para que no se recorten */
+    max-width: 100%; /* Asegura que las imágenes no sean más anchas que su contenedor */
+    max-height: 100%; /* Asegura que las imágenes no sean más altas que su contenedor */
+    opacity: 0.02; /* Opacidad inicial baja */
+    transition: opacity 5s ease; /* Transición suave */
+
+  }
+  
